@@ -73,7 +73,9 @@
       <section class="hero section">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="button" type="button">Order Service</button>
+          <button class="button js-open-modal" type="button">
+            Order Service
+          </button>
         </div>
       </section>
       <!--End Hero Section-->
@@ -545,10 +547,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer-flex">
-        <!-- <div class="footer-flex"> -->
-        <div class="footer-logo-golder">
+        <div class="footer-logo-holder">
           <a class="logo footer-logo" href="./index.html"
             >Web<span class="logo-light">Studio</span></a
           >
@@ -558,7 +559,7 @@
           </p>
         </div>
         <div class="footer-social-holder">
-          <p class="footer-social-text">Social media</p>
+          <p class="footer-text-title">Social media</p>
           <ul class="social-list footer-social-list">
             <li class="social-item">
               <a
@@ -614,8 +615,120 @@
             </li>
           </ul>
         </div>
-        <!-- </div> -->
+        <div class="footer-subscribe-block">
+          <p class="footer-text-title">Subscribe</p>
+          <form class="footer-subscribe-form">
+            <label class="email-label" for="email-input">
+              <input
+                class="email-input"
+                type="email"
+                placeholder="E-mail"
+                id="email-input"
+                autofocus
+              />
+            </label>
+            <button class="button subscribe-button" type="submit">
+              Subsribe
+              <svg class="subscribe-button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- Modal window  -->
+    <div class="backdrop js-modal">
+      <div class="modal">
+        <button class="modal-btn js-close-modal" type="button">
+          <svg class="modal-btn-close-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form class="modal-form" name="contacts-form">
+          <div class="input-holder">
+            <label class="label-name" for="userName">Name</label>
+            <div class="input-data-holder">
+              <input
+                class="input-field"
+                type="text"
+                name="userName"
+                id="userName"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-input-name"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-holder">
+            <label class="label-name" for="userPhone">Phone</label>
+            <div class="input-data-holder">
+              <input
+                class="input-field"
+                type="tel"
+                name="userPhone"
+                id="userPhone"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-input-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-holder">
+            <label class="label-name" for="userEmail">Email</label>
+            <div class="input-data-holder">
+              <input
+                class="input-field"
+                type="email"
+                name="userEmail"
+                id="userEmail"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-input-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-holder">
+            <label class="label-name" for="userComment">Comment</label>
+            <div class="input-comment-holder">
+              <textarea
+                class="input-comment"
+                name="userComment"
+                id="userComment"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox-field">
+            <input
+              class="input-checkbox visually-hidden"
+              type="checkbox"
+              name="userAgreement"
+              id="userAgreement"
+              value="true"
+            />
+            <label class="label-checkbox-agreement-text" for="userAgreement">
+              <span class="custom-checkbox">
+                <svg class="custom-checkbox-icon" width="16" height="16">
+                  <use href="./images/icons.svg#checkbox-icon"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="privacy-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="form-send-btn button">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- End Modal window  -->
+
+    <script src="./js/form.js"></script>
   </body>
 </html>
