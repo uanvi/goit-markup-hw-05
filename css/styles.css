@@ -624,10 +624,11 @@ button:focus {
   background-color: var(--ocean);
 }
 .modal-btn-close-icon {
-  .icon-close {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    fill: var(--navy-blue);
-  }
+  transition: var(--anim-fill);
+  fill: var(--navy-blue);
+}
+.modal-form {
+  margin-bottom: 8px;
 }
 .modal-text {
   width: 100%;
@@ -667,10 +668,12 @@ button:focus {
   height: 40px;
 
   border-radius: 4px;
-  border: 1px solid var(--navy-blue);
+  border: 1px solid var(--navy-blue-modal);
+  background-color: transparent;
   outline: transparent;
   transition: var(--anim-header-color);
   padding-left: 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-field:focus {
   border-color: var(--iris);
