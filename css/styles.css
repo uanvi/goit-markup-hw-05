@@ -587,41 +587,35 @@ button:focus {
   padding: 72px 24px 24px 24px;
 
   border-radius: 4px;
-  background: var(--dairy);
+  background-color: var(--dairy);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: var(--anim-overlay);
 }
 .modal-btn {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
 
-  color: var(--cornflower);
   background-color: var(--cornflower);
-
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 50%;
-  /* stroke: var(--navy-blue);
-  fill: var(--cornflower); */
 
-  padding: 0;
-  border: none;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  justify-content: center;
-  background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  border-radius: 50%;
 }
+
 .modal-btn:hover,
 .modal-btn:focus {
   fill: var(--white);
   background-color: var(--ocean);
+  border: none;
 }
 .modal-btn-close-icon {
   transition: var(--anim-fill);
@@ -644,7 +638,7 @@ button:focus {
   margin-bottom: 16px;
 }
 .input-holder {
-  position: relative;
+  margin-bottom: 8px;
 }
 .input--text-holder {
   margin-bottom: 16px;
@@ -660,7 +654,6 @@ button:focus {
 }
 .input-data-holder {
   position: relative;
-  margin-bottom: 8px;
 }
 .input-field {
   display: block;
