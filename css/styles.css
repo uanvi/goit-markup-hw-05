@@ -321,7 +321,6 @@ button {
   height: 56px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   text-align: center;
   display: block;
   margin: 0 auto;
@@ -566,7 +565,6 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(4px);
   transition: var(--anim-overlay);
   transition-property: opacity, visibility;
 }
@@ -615,7 +613,8 @@ button:focus {
   padding: 0;
 }
 
-.modal-btn:hover {
+.modal-btn:hover,
+.modal-btn:focus {
   fill: var(--white);
   background-color: var(--ocean);
   border: none;
@@ -717,7 +716,7 @@ button:focus {
   font-size: 12px;
   line-height: 117%;
   letter-spacing: 0.04em;
-  color: var(--navy-blue);
+  color: var(--navy-blue-modal);
   background-color: transparent;
 }
 .input-comment::placeholder {
@@ -742,17 +741,16 @@ button:focus {
   justify-content: center;
   fill: transparent;
 }
-.input-checkbox:checked + .label-checkbox-agreement-text > .custom-checkbox {
+.input-checkbox:checked + .label-checkbox > .custom-checkbox {
   background-color: var(--ocean);
   fill: #f4f4fd;
   border: none;
 }
-
 .checkbox-field {
   margin-bottom: 24px;
 }
 
-.label-checkbox-agreement-text {
+.label-checkbox {
   display: block;
   margin-bottom: 24px;
   width: 100%;
