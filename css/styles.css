@@ -727,9 +727,13 @@ button:focus {
   fill: transparent;
 }
 .input-checkbox:checked + .label-checkbox-agreement-text > .custom-checkbox {
-  background-color: var(--iris);
+  background-color: var(--ocean);
   fill: #f4f4fd;
   border: none;
+}
+
+.checkbox-field {
+  margin-bottom: 24px;
 }
 
 .label-checkbox-agreement-text {
