@@ -24,6 +24,7 @@
   --anim-overlay: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --anim-header-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --anim-background-color: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --anim-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* base */
@@ -529,7 +530,8 @@ button:focus {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  max-height: 40px;
+  height: 40px;
+  min-width: 165px;
 }
 .email-label {
 }
@@ -546,15 +548,17 @@ button:focus {
   border-radius: 4px;
   border: 1px solid var(--white);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding-left: 16px;
 }
 .subscribe-button-icon {
   fill: var(--white);
+  margin-left: 16px;
 }
 /* End Footer */
 
 /* Modal Window  */
 .backdrop {
-  position: fixed;
+  /* position: fixed; */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -565,6 +569,7 @@ button:focus {
   backdrop-filter: blur(4px);
   transition: var(--anim-overlay);
   transition-property: opacity, visibility;
+  background-color: var(--dairy);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -573,21 +578,20 @@ button:focus {
 }
 .backdrop .modal {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
   width: 90%;
   max-width: 408px;
   min-height: 584px;
-  padding: 72px 24px 0px 24px;
+  padding: 72px 24px 24px 24px;
 
   border-radius: 4px;
   background: var(--dairy);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  transition: var(--anim-box-shadow);
-  transition-property: opacity, transform;
+  transition: var(--anim-overlay);
 }
 .modal-btn {
   position: absolute;
@@ -595,11 +599,14 @@ button:focus {
   right: 24px;
 
   color: var(--cornflower);
-  transition: var(--anim-header-color);
+  background-color: var(--cornflower);
+
+  transition: var(--anim-background-color);
   transition-property: color;
   border-radius: 50%;
   stroke: var(--navy-blue);
   fill: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   padding: 0;
   border: none;
@@ -612,8 +619,14 @@ button:focus {
 .modal-btn:focus {
   color: var(--iris);
   stroke: var(--white);
+  fill: var(--white);
+  background-color: var(--ocean);
 }
-
+.modal-btn-close-icon {
+  width: 8px;
+  height: 8px;
+  transition: var(--anim-fill);
+}
 .modal-text {
   width: 100%;
   max-width: 360px;
@@ -660,8 +673,9 @@ button:focus {
   position: absolute;
   left: 16px;
   top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
-  transition: var(--anim-header-color);
+  transition: var(--anim-fill);
 }
 .input-field:focus + .input-icon {
   stroke: var(--iris);
