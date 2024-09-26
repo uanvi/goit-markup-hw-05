@@ -9,4 +9,5 @@ refs.closeModalBnt.addEventListener('click', toggleModal);
 
 function toggleModal(event) { 
     refs.modal.classList.toggle('is-open')
+    document.body.classList.toggle('no-scroll')
 }
