@@ -479,8 +479,7 @@ button:focus {
   margin-bottom: 16px;
 }
 .footer-social-holder {
-  display: inline-block;
-  margin-right: 120px;
+  margin-right: auto;
 }
 .footer-social-list {
   margin-top: 16px;
@@ -518,7 +517,6 @@ button:focus {
   gap: 24px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
 }
 .footer-subscribe-title {
   margin-bottom: 16px;
@@ -528,7 +526,6 @@ button:focus {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   height: 40px;
   min-width: 165px;
 }
@@ -548,6 +545,7 @@ button:focus {
   border: 1px solid var(--white);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding-left: 16px;
+  outline: transparent;
 }
 .subscribe-button-icon {
   fill: var(--white);
