@@ -529,8 +529,6 @@ button:focus {
   height: 40px;
   min-width: 165px;
 }
-.email-label {
-}
 .email-input {
   color: var(--white);
   background-color: transparent;
